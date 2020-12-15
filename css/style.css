@@ -13,13 +13,13 @@ body {
   border: solid 1px #ffffff;
   border-radius: 20px;
   display: flex;
-  font-size: 130px;
+  font-size: 4rem;
   font-weight: bold;
   justify-content: center;
-  height: 180px;
+  height: 15vh;
   margin: 0 auto 10px;
   text-align: center;
-  width: 180px;
+  width: 15vw;
   background-color: #77c2ff;
 }
 
@@ -30,7 +30,8 @@ body {
   margin: 0 auto;
   list-style: none;
   padding: 0;
-  width: 800px;
+  width: 55vw;
+  justify-content: center;
 }
 
 .number li {
@@ -39,11 +40,12 @@ body {
   border-radius: 20px;
   display: flex;
   justify-content: center;
-  height: 60px;
+  height: 5vh;
   margin: 4px;
-  width: 60px;
+  width: 5vw;
   font-weight: bold;
   background-color:  #77c2ff;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 767px) {
@@ -52,25 +54,26 @@ body {
   }
 }
 
-.number li {
+/* .number li {
   align-items: center;
   border: solid 1px #ffffff;
   border-radius: 20px;
   display: flex;
   justify-content: center;
-  height: 60px;
+  height: 50px;
   margin: 4px;
-  width: 60px;
+  width: 50px;
   font-weight: bold;
-}
+} */
 
 .number li.hit {
-  background: #008cff;
+  background: #ff6600;
   color: #fff;
 }
 
 .wrapper-button {
-  padding: 20px 0 50px;
+  /* padding: 20px 0 50px; */
+  padding-top: 2vh;
   text-align: center;
 }
 
@@ -82,13 +85,13 @@ body {
   display: inline-block;
   font-size: 20px;
   text-decoration: none;
-  height: 100px;
-  line-height: 100px;
+  height: 10vh;
+  /* line-height: 100px; */
   overflow: hidden;
   text-align: center;
   transition: .4s;
   vertical-align: middle;
-  width: 100px;
+  width: 10vw;
 }
 
 .button:hover {
