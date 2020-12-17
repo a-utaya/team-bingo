@@ -6,6 +6,12 @@ body {
     background: url(../image/back2.jpg) center center / cover;
 }
 
+#result {
+  text-align: center;
+  font-size: 100px;
+}
+
+
 #bingo {
     width: 500px;
     margin: auto;
