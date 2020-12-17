@@ -1,8 +1,9 @@
+html {
+    height: 100%;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
+    background: url(../image/back2.jpg) center center / cover;
 }
 
 #result {
@@ -12,62 +13,95 @@ body {
 
 
 #bingo {
-      width: 500px;
-      margin: 0 auto;
-      border-collapse: separate;
-      border-spacing: .65rem;
-      border: 1px solid  #77c2ff;
-      margin-top: 80px;
-    }
+    width: 500px;
+    margin: auto;
+    border-collapse: separate;
+    border: 1px solid rgba(2, 102, 19, 0.9);
+    margin-top: 3rem;
+}
 
-    #bingo th,
-    #bingo td {
-      text-align: center;
-      font-weight: normal;
-    }
+#bingo th {
+    height: 3rem;
+    font-size: 2rem;
+    color: #fffb00;
+    /* background-color: #fff; */
+    border: none;
+}
 
+#bingo td {
+    width: 80px;
+    height: 85px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 1.5rem 1.5rem 0 0;
+    color: #fff;
+    font-weight: bold;
+    background-color: rgba(211, 0, 0, 0.8);
+    border: 2px solid rgba(211, 0, 0, 0.8);
+}
+
+#bingo td.check {
+    color: rgba(211, 0, 0, 0.9);
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+#bingo td:hover {
+    cursor: pointer;
+    cursor: hand;
+}
+
+p#button {
+    text-align: center;
+}
+
+p#button input {
+    outline: none;
+    width: 150px;
+    height: 100px;
+    color: #fff;
+    border-radius: 20px;
+    border: #77c2ff;
+    background-color: rgba(211, 0, 0, 0.9);
+}
+
+
+/* スマホ用 */
+
+@media screen and (max-width: 480px) {
+    body {
+        /* height: 100%; */
+        background: url(../image/back.jpg)center center/cover;
+    }
+    #bingo {
+        margin-top: 7rem;
+        width: 100%;
+        border-spacing: 2px;
+        border: 1px solid rgba(2, 102, 19, 0.9);
+    }
     #bingo th {
-      color:  #77c2ff;
-      background-color: #fff;
-      border: none;
-      font-weight: bold;
+        height: 3rem;
+        color: #fffb00;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
     }
-
     #bingo td {
-      width: 80px;
-      height: 85px;
-      text-align: center;
-      vertical-align: middle;
-
-      border-radius: 1.5rem 1.5rem 0 0;
-      color: #fff;
-      font-weight: bold;
-      background-color: #77c2ff;
-      border: 2px solid #77c2ff;
+        width: 80px;
+        height: 85px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 1.5rem 1.5rem 0 0;
+        color: #fff;
+        font-weight: bold;
+        background-color: rgba(2, 102, 19, 0.9);
+        border: 2px solid rgba(2, 102, 19, 0.9);
     }
-
     #bingo td.check {
-      color:  #77c2ff;
-      background-color: #F0F0F0;
+        color: rgba(2, 102, 19, 0.6);
+        background-color: rgba(255, 255, 255, 0.3);
+        border: 2px solid rgba(255, 255, 255, 0);
     }
-
-    #bingo td:hover {
-      cursor: pointer;
-      cursor: hand;
-    }
-
-    p#button {
-      text-align: center;
-    }
-
     p#button input {
-      width: 150px;
-      height: 100px;
-      padding: .5rem;
-      margin: 0 auto;
-      color: #fff;
-      border-radius: 20px;
-      border: #77c2ff;
-      background-color: #77c2ff;
-
+        color: #fffb00;
+        background: rgba(2, 102, 19, 0.9);
     }
+}
