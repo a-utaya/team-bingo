@@ -64,6 +64,11 @@ p#button input {
     background-color: rgba(211, 0, 0, 0.9);
 }
 
+  /*追加項目*/
+.cardnone{
+  display: none;
+}
+
 
 /* スマホ用 */
 
