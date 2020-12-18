@@ -54,15 +54,20 @@ $(() => {
             };
             
             //リロード判定行い、リロード時にローカルストレージへ保存した番号再表示
+            //カードを選びなおす非表示
             const arter_reload = () => {
-                if (performance.navigation.type === 1) {
-                    let jsonBingo_number = localStorage.getItem('bingo_number');
-                    let reloadBingp_number = JSON.parse(jsonBingo_number);
-                    console.log(reloadBingp_number);
-                    for (let i = 0; i < reloadBingp_number.length; i++) {
-                        $('#bi' + i).text(reloadBingp_number[i]);
+                var perfEntries = performance.getEntriesByType("navigation");
+                perfEntries.forEach(function (pe) {
+                    if (pe.type == 'reload') {
+                        let jsonBingo_number = localStorage.getItem('bingo_number');
+                        let reloadBingp_number = JSON.parse(jsonBingo_number);
+                        console.log(reloadBingp_number);
+                        for (let i = 0; i < reloadBingp_number.length; i++) {
+                            $('#bi' + i).text(reloadBingp_number[i]);
+                        };
+                    $('#button').hide();
                     };
-                };
+                });
             }
             // 初期化関数
             const init = () => {
@@ -87,16 +92,12 @@ $(() => {
                 init();
             });
             
-            // 番号をクリックすると、スタイルを変更するクラスをつけ外しできる
-            
-            //リロード時注意警告
-            $(window).on('beforeunload', function(){
-                const message = 'リロードしないでください';
-                return message;
-            });
             
             //リロード後
+            
             arter_reload();
+    
+            // 番号をクリックすると、スタイルを変更するクラスをつけ外しできる
             $('#bingo td').click(function () {
         $(this).toggleClass('check');
         if ($("#bi0").hasClass('check')&&$("#bi1").hasClass('check')&&$("#bi2").hasClass('check')&&$("#bi3").hasClass('check')&&$("#bi4").hasClass('check')) {
