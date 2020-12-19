@@ -55,20 +55,32 @@ $(() => {
             
             //リロード判定行い、リロード時にローカルストレージへ保存した番号再表示
             //カードを選びなおす非表示
+            // const arter_reload = () => {
+            //     var perfEntries = performance.getEntriesByType("navigation");
+            //     perfEntries.forEach(function (pe) {
+            //         if (pe.type == 'reload') {
+            //             let jsonBingo_number = localStorage.getItem('bingo_number');
+            //             let reloadBingp_number = JSON.parse(jsonBingo_number);
+            //             console.log(reloadBingp_number);
+            //             for (let i = 0; i < reloadBingp_number.length; i++) {
+            //                 $('#bi' + i).text(reloadBingp_number[i]);
+            //             };
+            //         $('#button').hide();
+            //         };
+            //     });
+            // }
             const arter_reload = () => {
-                var perfEntries = performance.getEntriesByType("navigation");
-                perfEntries.forEach(function (pe) {
-                    if (pe.type == 'reload') {
-                        let jsonBingo_number = localStorage.getItem('bingo_number');
-                        let reloadBingp_number = JSON.parse(jsonBingo_number);
-                        console.log(reloadBingp_number);
-                        for (let i = 0; i < reloadBingp_number.length; i++) {
-                            $('#bi' + i).text(reloadBingp_number[i]);
-                        };
-                    $('#button').hide();
+                if (performance.navigation.type === 1) {
+                    let jsonBingo_number = localStorage.getItem('bingo_number');
+                    let reloadBingp_number = JSON.parse(jsonBingo_number);
+                    console.log(reloadBingp_number);
+                    for (let i = 0; i < reloadBingp_number.length; i++) {
+                        $('#bi' + i).text(reloadBingp_number[i]);
                     };
-                });
+                $('#button').hide();
+                };
             }
+            
             // 初期化関数
             const init = () => {
                 create_card();
