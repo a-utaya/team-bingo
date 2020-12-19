@@ -1,30 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 html {
     height: 100%;
 }
 
 body {
-    background: url(../image/back2.jpg) center center / cover;
+    background: url(../image/back2.jpg) center center / cover fixed;
 }
 
-#result {
-  text-align: center;
-  font-size: 100px;
+.result {
+    height: 6rem;
+    line-height: 6rem;
+    text-align: center;
+    font-size: 3rem;
+    margin: 2rem 0 2rem 0;
+    color: #fffb00;
 }
-
 
 #bingo {
     width: 500px;
-    margin: auto;
+    margin: 0 auto;
+    color: rgba(211, 0, 0, 0.9);
     border-collapse: separate;
     border: 1px solid rgba(2, 102, 19, 0.9);
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
 }
 
 #bingo th {
     height: 3rem;
     font-size: 2rem;
-    color: #fffb00;
-    /* background-color: #fff; */
+    color: rgba(211, 0, 0, 0.9);
     border: none;
 }
 
@@ -55,6 +63,7 @@ p#button {
 }
 
 p#button input {
+    margin-top: 1rem;
     outline: none;
     width: 150px;
     height: 100px;
@@ -72,15 +81,22 @@ p#button input {
         /* height: 100%; */
         background: url(../image/back.jpg)center center/cover;
     }
+    .result {
+        height: 6rem;
+        line-height: 6rem;
+        text-align: center;
+        font-size: 3rem;
+        margin: 2rem 0 2rem 0;
+        color: #fffb00;
+    }
     #bingo {
-        margin-top: 7rem;
         width: 100%;
         border-spacing: 2px;
         border: 1px solid rgba(2, 102, 19, 0.9);
     }
     #bingo th {
         height: 3rem;
-        color: #fffb00;
+        color: rgba(2, 102, 19, 0.9);
         background-color: rgba(0, 0, 0, 0);
         border: none;
     }
